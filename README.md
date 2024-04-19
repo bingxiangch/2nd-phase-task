@@ -1,7 +1,8 @@
 # Authorization-Based Data Access for RAG-Enabled Generative AI (On-Premises)
 
 ## Description
-This project introduces a demo application that showcases the integration of access control mechanisms and retrieval augmented generation (RAG) for a Generative AI system that can guarantee a response from the model that only contains information that the given user has the right to see. 
+This is my master thesis project work for Solita company, which develops a generative AI application that incorporates the Retrieval-Augmented Generation (RAG) framework with access control mechanisms to deal with enterprise documents, that can generate and summarize documents and generate an answer based on user permission.
+I have revised my master's thesis project to align with the requirements of the second phase's task. The system is powered by Retrieval-Augmented Generation (RAG) framework. I have integrated two LLM models,  one is mistral-7b an open-source model, and the GPT-3.5 model. 
 I have revised my thesis project to align with the requirements of the second phase task that Integrate two LLM models (Mistral 7B and GPT3.5) for summarization of PDF contents.
 
 ## System Overview:
