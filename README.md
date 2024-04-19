@@ -1,16 +1,9 @@
 # Authorization-Based Data Access for RAG-Enabled Generative AI (On-Premises)
 
 ## Description
-This project introduces a demo application that showcases the integration of access control mechanisms and retrieval augmented generation (RAG) for a Generative AI system dealing with substance data. xxxx
-
+This project introduces a demo application that showcases the integration of access control mechanisms and retrieval augmented generation (RAG) for a Generative AI system dealing with substance data. I have revised my thesis project to align with the requirements of the second phase task.
 
 ## Usage Instructions
-   - **Live Demo:** http://34.69.32.9:3000/
-
-The project is deployed on Google Compute Engine with a GPU machine type (1 x NVIDIA L4, 4 vCPU, 64GB memory, 128GB disk).
-
-
-After a successful installation and launch of the project, follow the steps below to explore and interact with the system:
 
 **1. Login Credentials:**
    - **Username:** root
