@@ -1,9 +1,28 @@
 # Authorization-Based Data Access for RAG-Enabled Generative AI (On-Premises)
 
 ## Description
-This project introduces a demo application that showcases the integration of access control mechanisms and retrieval augmented generation (RAG) for a Generative AI system dealing with substance data. I have revised my thesis project to align with the requirements of the second phase task.
+This project introduces a demo application that showcases the integration of access control mechanisms and retrieval augmented generation (RAG) for a Generative AI system that can guarantee a response from the model that only contains information that the given user has the right to see. 
+I have revised my thesis project to align with the requirements of the second phase task that Integrate two LLM models (Mistral 7B and GPT3.5) for summarization of PDF contents.
 
-## Usage Instructions
+## System Overview:
+- **Retrieval-Augmented Generation (RAG) Framework**: Incorporate the LlamaIndex and Retrieval-Augmented Generation (RAG) to generate contextually relevant responses based on the content of uploaded documents.
+- **Document Interaction**: Users can upload documents to the system, which are then processed, users can also edit documents' permission.
+- **Summarization and Query Answering**: The system can summarize documents and answer questions about their content. For instance, querying about "Mark Lee.pdf" provides summaries from both GPT-3.5 and Mistral-7b, with GPT-3.5 generally producing more concise results.
+
+## Features:
+- **User Interface**: The interface includes a document upload page and a chat page for interaction, displaying results in two boxes for each model.
+- **Access Control**: Integrates with the RAG system to restrict query access based on user permissions, ensuring data privacy and security.
+- **Backend Technology**: Built using FastAPI and Python, with the frontend developed in React.
+- **Data Processing**: Documents are split into chunks, with each chunk's vector embedding calculated and stored in the Chroma vector database for quick retrieval.
+- **Query Handling**: Queries are transformed into embeddings, matched with the most relevant document content in the database, and then fed into the LLMs to generate responses.
+
+## Technical Implementation:
+- **Ingestion Pipeline**: When a PDF is uploaded, it’s broken down into manageable pieces, each represented as a vector in the Chroma database.
+- **Integration Components**:
+  - **APIs**: Managed in the `auth_gpt: routers` folder.
+  - **Service Implementation**: Located in the `service` module.
+  - **LLM Component**: Handles the actual implementation of LLM interfaces, like LlamaCPP or OpenAI.
+- **Configuration**: The settings file allows for fine-tuning of system prompts and LLM parameters such as token size and context windows.
 
 **1. Login Credentials:**
    - **Username:** root
